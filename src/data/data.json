@@ -1,0 +1,27 @@
+[
+  {
+    "name": "input type button",
+    "type": "button",
+    "disabled": false
+  },
+  {
+    "name": "input type text",
+    "type": "text",
+    "disabled": false
+  },
+  {
+    "name": "input type search",
+    "type": "search",
+    "disabled": false
+  },
+  {
+    "name": "input type checkbox",
+    "type": "checkbox",
+    "disabled": false
+  },
+  {
+    "name": "input type password",
+    "type": "password",
+    "disabled": false
+  }
+]
