@@ -1,11 +1,13 @@
 <template>
-  <div id="app">
+  <div id="app" class="app">
     <redactor></redactor>
+    <formgenerator></formgenerator>
   </div>
 </template>
 
 <script>
   import redactor from './components/Redactor'
+  import formgenerator from './components/ForfmGenerator'
 export default {
   name: 'app',
   data () {
@@ -14,11 +16,15 @@ export default {
     }
   },
   components: {
-    redactor
+    redactor,
+    formgenerator
   }
 }
 </script>
 
 <style lang="scss">
-
+  .app {
+    display: flex;
+    justify-content: space-between;
+  }
 </style>

@@ -14,8 +14,9 @@ export default new Vuex.Store({
     }
   },
   mutations: {
-    changeJson(state) {
-      state.dataJson = document.getElementsByClassName('redactor__textarea').value
+    updateJson(state, textAreaVal) {
+      state.dataJson = JSON.parse(textAreaVal)
+      // console.log(state.dataJson)
     }
   },
   actions: {

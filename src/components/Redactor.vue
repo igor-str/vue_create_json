@@ -1,6 +1,6 @@
 <template>
   <div id="redactor" class="redactor">
-    <textarea class="redactor__textarea" v-model="dataJson" @blur="changeJson">
+    <textarea class="redactor__textarea" v-model="dataJson" @blur="updateJson">
 
     </textarea>
   </div>
@@ -14,21 +14,25 @@
       return {}
     },
     computed: {
-      ...mapGetters({dataJson: 'getJson'}),
+      ...mapGetters({dataJson: 'getJson'})
     },
     methods: {
-      ...mapMutations(['changeJson'])
+      updateJson (e) {
+        this.$store.commit('updateJson', e.target.value)
+      }
     }
   }
 </script>
 
 <style lang="scss" scoped>
   .redactor {
-    width: 50%;
+    width: 49%;
     height: 100vh;
+
     &__textarea {
       width: 100%;
       height: 100%;
+      padding: 0;
     }
   }
 </style>
