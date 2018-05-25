@@ -1,24 +1,36 @@
 <template>
   <div id="redactor" class="redactor">
-    <textarea class="redactor__textarea" v-model="dataJson" @blur="updateJson">
+    <textarea class="redactor__textarea" v-model="json" @blur="updateJson">
 
     </textarea>
   </div>
 </template>
 
 <script>
-  import {mapState, mapGetters, mapMutations} from 'vuex'
+  import {mapGetters} from 'vuex'
 
   export default {
     data() {
-      return {}
+      return {
+        json: ''
+      }
     },
     computed: {
       ...mapGetters({dataJson: 'getJson'})
     },
     methods: {
-      updateJson (e) {
+      updateJson(e) {
         this.$store.commit('updateJson', e.target.value)
+      }
+    },
+    mounted() {
+      this.json = this.dataJson
+    },
+    watch: {
+      json: function (newValue) {
+        if (newValue) {
+          this.$store.commit('updateJson', this.json)
+        }
       }
     }
   }

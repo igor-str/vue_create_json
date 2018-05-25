@@ -30,4 +30,10 @@
     width: 49%;
     height: 100vh;
   }
+  input {
+    width: 50%;
+    display: inline-block;
+    margin: 5px auto;
+    box-sizing: border-box;
+  }
 </style>

@@ -10,7 +10,7 @@ export default new Vuex.Store({
   },
   getters: {
     getJson: state => {
-      return JSON.stringify(state.dataJson)
+      return JSON.stringify(state.dataJson, null, 2)
     }
   },
   mutations: {

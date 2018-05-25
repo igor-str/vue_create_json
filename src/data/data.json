@@ -10,6 +10,11 @@
     "disabled": false
   },
   {
+    "name": "input type text disabled",
+    "type": "text",
+    "disabled": true
+  },
+  {
     "name": "input type search",
     "type": "search",
     "disabled": false
@@ -22,6 +27,11 @@
   {
     "name": "input type password",
     "type": "password",
+    "disabled": false
+  },
+  {
+    "name": "input type color",
+    "type": "color",
     "disabled": false
   }
 ]
